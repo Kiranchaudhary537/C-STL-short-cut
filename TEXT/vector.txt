@@ -1,0 +1,77 @@
+#include  <vector>
+declare: vector<int> v  just like int a[n]
+   where vector<int> is data  type
+   and v is veriable.
+use;
+    std::vector<int> ::iterator it;
+    v.begin == first element of vector.
+    v.end  ==last element of  vector.
+    v.push_back=add element to current last position. 
+       if for position 1 then  store at  v[1];
+    v.insert ==insert  element.
+       v.insert(v.begin+5)  insert element at 5  position  v[4];
+    v.erase= delect element.
+         same as  insert.
+    v.size= size of  vector.
+        int n=v.size()  store  number of element in n;
+---------------------------------clear--------
+Erases all elements from the container. After this call, size() returns zero.
+
+--------------vector find-------------
+ auto it=find(v.begin()+i, v.end(),f)
+ count(v.begin(), v.end(), (f^b))
+ -------------------------------------
+ 
+        vector pair
+
+#include <utility>
+      vector<pair<int ,int>>v;
+
+     v.push_back(make_pair(a[i],b[i]));v.push_back({m,k});
+
+       now vector has  pair value 
+     use:
+     v[i].first  ->gives pair's first element;
+     v[i].second ->second element of ith  pair.
+
+
+
+     vector sort basic on  first element or sort simple  vector vector<int>
+ sort(v.begin(),v.end);
+         vector sort basic on  second element
+         sort(v.begin(),v.second(),sortbysec);
+         bool sortbysec(const pair<int,int> &a,
+const pair<int,int> &b)
+{
+return (a.second < b.second);
+}
+------------------short trick--------------------------------
+vector<ll> vec(n);   declare
+  loop(i,n) cin>>vec[i];   take input
+  sort(all(vec));     sortt
+   loop(i,n) cout << vec[i] << " ";  
+   --------- -- - - -  - -  -  -  -----------   --  -  - - -  -  -  -    
+
+--------------------  find with position -----------------------
+    void getIndex(vector<ll> v, int K)
+{                                            // here k that we want  to find;
+
+    auto it = find(v.begin(), v.end(), K);
+ 
+
+    if (it != v.end()) 
+
+    {
+    int index = it - v.begin();
+    cout << index << endl;
+     }
+
+    else { cout << "0" << endl;
+     }
+}
+-------------------------------------------------------------------
+merge(a.begin(),a.end(),b.begin(),b.end(),c.begin());
+  vector of array and b  mergining in c vector
+  -----------------------------------------------------------
+
+
