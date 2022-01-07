@@ -112,4 +112,8 @@ int main()
         cout << found << endl;
 -----------------------------------------------------------------------------
 make  new string s  from  another  [string str2 = str.substr(i, n);]
+----------------unique----------
+ it = std::unique (myvector.begin(), myvector.end());
+ 
+  myvector.resize( std::distance(myvector.begin(),it) );
 
